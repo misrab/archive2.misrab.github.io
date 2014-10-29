@@ -2,3 +2,47 @@
 layout: main
 title: Misrab's Blog
 ---
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-1"></div>
+		<div class="col-md-10 relative" style="padding: 10px 50px;">
+			<div class="lucid"></div>
+			<h1>Posts</h1>
+
+			<!-- posts here -->
+			<ul>
+				{% for post in site.posts %}
+					<li>
+						<a href="{{ post.url }}">{{ post.title }}</a>
+
+						<span class="grey"> - {{ post.date | date: "%-d %B %Y" }}</span>
+					</li>
+				{% endfor %}
+			</ul>
+			<!-- <ul>
+				<li>
+					<a href="/posts/2014-10-probability">
+						An Idiot's Thoughts on Machine Learning
+					</a>
+					<span class="grey"> - October 29, 2014</span>
+				</li>
+			</ul>
+
+
+			<ul>
+				<li>
+					<a href="/posts/2014-10-probability">
+						An Exploration of Basic Probability
+					</a>
+					<span class="grey"> - October 28, 2014</span>
+				</li>
+			</ul> -->
+
+			<a class="big_space_top" href="https://medium.com/@misrabfaizullahkhan">
+				<h3 style="color: black;">More posts here...</h3>
+			</a>
+		</div>
+		<div class="col-md-1"></div>
+	</div>
+</div>
