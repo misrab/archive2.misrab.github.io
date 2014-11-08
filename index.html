@@ -8,9 +8,9 @@ title: Misrab's Blog
 		<div class="col-md-1"></div>
 		<div class="col-md-10 relative" style="padding: 10px 50px;">
 			<div class="lucid"></div>
-			<h1>Posts</h1>
 
 			<!-- posts here -->
+			<h1>Posts</h1>
 			<ul>
 				{% for post in site.posts %}
 					<li>
@@ -20,24 +20,16 @@ title: Misrab's Blog
 					</li>
 				{% endfor %}
 			</ul>
-			<!-- <ul>
-				<li>
-					<a href="/posts/2014-10-probability">
-						An Idiot's Thoughts on Machine Learning
-					</a>
-					<span class="grey"> - October 29, 2014</span>
-				</li>
-			</ul>
 
-
+			<h1>Bioinformatics I</h1>
 			<ul>
-				<li>
-					<a href="/posts/2014-10-probability">
-						An Exploration of Basic Probability
-					</a>
-					<span class="grey"> - October 28, 2014</span>
-				</li>
-			</ul> -->
+				{% for note in site.bioinformatics1 %}
+					<li>
+						<a href="{{ note.url }}">{{ note.title }}</a>
+						<span class="grey"> - {{ note.date | date: "%-d %B %Y" }}</span>
+					</li>
+				{% endfor %}
+			</ul>
 
 			<a class="big_space_top" href="https://medium.com/@misrabfaizullahkhan">
 				<h3 style="color: black;">More posts here...</h3>

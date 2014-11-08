@@ -1,2 +1,5 @@
 source: .
 destination: ./_site
+collections:
+  bioinformatics1:
+    output: true
