@@ -26,7 +26,7 @@ reproductive success
 
 ![]({{ site.url }}/images/bioinformatics1/lecture2/2.png)
 
-[Chromosomes](http://en.wikipedia.org/wiki/Chromosome) are amazing: they have multiple layers of organisation:
+[Chromosomes](http://en.wikipedia.org/wiki/Chromosome) are amazing. They have multiple layers of organisation:
 
 ![]({{ site.url }}/images/bioinformatics1/lecture2/3.png)
 
