@@ -3,3 +3,5 @@ destination: ./_site
 collections:
   bioinformatics1:
     output: true
+  bioinformatics2:
+    output: true
