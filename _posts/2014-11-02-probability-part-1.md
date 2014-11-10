@@ -45,9 +45,9 @@ We could start by simply assign real numbers. For example, we could set
 $$ (A,B,C) = (1,2,3) $$ or $$ (A,B,C) = (3,2,1) $$. 
 But then in the first case we have an expected value of 
 2.2, and in the second case 1.8, without changing the fundamental problem. This leads to, 
-as far as I know, a fundamental restriction when we want to play with numeric concepts like
-expected value or variance. Let's investigate this a bit further since we're already
-having so much fun.
+as far as I know, a fundamental restriction when we want to play with numeric concepts like expected value or variance. Technically speaking, that is why we define them in terms of a **random variable**, a function from $$ \mathbf{X} \rightarrow \mathbf{E} $$ 
+where $$ \mathbf{E} $$ is a measurable space, usually $$ \mathbb{R} $$. But this 
+doesn't tell us much about how we might think about assigning numbers to our events. Let's investigate this a bit further since we're already having so much fun.
 
 I'll try to develop a bit of intuition concerning expectation when we _are_ using numbers, to see how we might want to make the leap from non-numbers. Consider now 
 $$ \mathbf{X} = \{ 1, 2 \} $$ with $$ P(1) = P(2) = 0.5 $$.
