@@ -52,7 +52,7 @@ doesn't tell us much about how we might think about assigning numbers to our eve
 I'll try to develop a bit of intuition concerning expectation when we _are_ using numbers, to see how we might want to make the leap from non-numbers. Consider now 
 $$ \mathbf{X} = \{ 1, 2 \} $$ with $$ P(1) = P(2) = 0.5 $$.
 
-![probability histogram]({{ site.url }}/images/1.svg)
+![probability histogram]({{ site.url }}/images/prob1/1.svg)
 
 ### Linearity in events
 
@@ -91,12 +91,12 @@ The question then arises, might there be any purpose in converting non-numeric e
 a normed vector space other than $$ \mathbb{R} $$?  We could call this "pre-processing", since in any case we're ultimately taking a norm which leads to a real number. But there might some modelling advantages. A simple case would be $$ \mathbb{R^2} $$. Consider a point $$ A $$ at $$ (1,1) $$. We could translate it to $$(1,2)$$ or $$(2,1)$$; either 
 would change the $$2-norm$$ by the same amount. 
 
-![point translation]({{ site.url }}/images/2.svg)
+![point translation]({{ site.url }}/images/prob1/2.svg)
 
 In fact by using the $$2-norm$$ we're 
 defining an equivalence class on a circle. For example each point could represent (height, age), and we're defining a tradeoff function when it comes to probability expectation. Different norms lead to different tradeoff functions:
 
-![unit norms]({{ site.url }}/images/3.png)
+![unit norms]({{ site.url }}/images/prob1/3.png)
 
 One could imagine first converting a non-numeric sample space into a 
 meaninful vector space with "probability" equivalence classes induced by 
