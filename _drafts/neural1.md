@@ -24,11 +24,20 @@ learning** more generally, and hope the algorithm identifies a good set of rules
 Neural networks are a class of these learning algorithms. Let's look into why we 
 might care about them at all, given some other possible techniques.
 
-## Context
+## Statistical Context
 
 As we said, we want some sort of algorithm that's good at learning rules from data. 
 Probability is a good framework for this since data is seldom black or white: pigeons 
-have a whole range of sizes, but some sizes are more intuitively likely than others.
+have a whole range of sizes, but some sizes are more likely (intuitively speaking) than others.
+
+So how can we use data to learn? It can be stifling to try and imagine all the possible 
+ways. Indeed there are a number of concrete techniques: [SVMs](http://en.wikipedia.org/wiki/Support_vector_machine) that seperate classes through margins, decision tree methods like [Random Forests](http://en.wikipedia.org/wiki/Random_forest), neural networks, and many others.
+
+I find it helpful to just take a step back and look at **local** methods and **global** 
+methods. Suppose we have a bunch of data points each with a value $x$, and we're hoping to 
+estimate a value $y$ given some $x$. For example, consider the following picture:
+
+![data]({{ site.url }}/images/neural1/1.svg)
 
 ## Architecture
 
@@ -46,4 +55,5 @@ have a whole range of sizes, but some sizes are more intuitively likely than oth
 This series of posts is heavily inspired by the writings of 
 [Michael Nielsen](http://neuralnetworksanddeeplearning.com/), 
 [Richard Socher](http://www.socher.org/index.php/Main/HomePage), and 
-[Christopher Olah](http://colah.github.io/), which I highly recommend.
+[Christopher Olah](http://colah.github.io/), which I highly recommend. Some of the 
+statistical intuition is also influenced by [Trevor Hastie and Rob Tibshirani](http://www.r-bloggers.com/in-depth-introduction-to-machine-learning-in-15-hours-of-expert-videos/).

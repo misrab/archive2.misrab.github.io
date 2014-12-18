@@ -60,7 +60,9 @@ $$ \mathbf{X} = \{ 1, 2 \} $$ with $$ P(1) = P(2) = 0.5 $$.
 What happens if we play with our event values?
 
 $$ \mathbf{X} = \{ 1, 2 \} \longrightarrow E(x) = 1.5 $$
+
 $$ \mathbf{X} = \{ 1, 3 \} \longrightarrow E(x) = 2 $$
+
 $$ \mathbf{X} = \{ 1, 4 \} \longrightarrow E(x) = 2.5 $$
 
 It's not too hard to see from our formula for expected value that if we change 
