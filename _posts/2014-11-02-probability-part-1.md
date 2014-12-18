@@ -1,6 +1,7 @@
 ---
 title: An Exploration of Basic Probability - Counting & Expectation
 layout: blog
+image: /images/prob1/3.png
 excerpt: |
   In the first part of this series, I look at probability as 
   counting, and expectation with non-numeric events. Can you tell 
@@ -58,9 +59,9 @@ $$ \mathbf{X} = \{ 1, 2 \} $$ with $$ P(1) = P(2) = 0.5 $$.
 
 What happens if we play with our event values?
 
-\[ \mathbf{X} = \\{ 1, 2 \\} \longrightarrow E(x) = 1.5 \]
-\[ \mathbf{X} = \\{ 1, 3 \\} \longrightarrow E(x) = 2 \]
-\[ \mathbf{X} = \\{ 1, 4 \\} \longrightarrow E(x) = 2.5 \]
+$$ \mathbf{X} = \{ 1, 2 \} \longrightarrow E(x) = 1.5 $$
+$$ \mathbf{X} = \{ 1, 3 \} \longrightarrow E(x) = 2 $$
+$$ \mathbf{X} = \{ 1, 4 \} \longrightarrow E(x) = 2.5 $$
 
 It's not too hard to see from our formula for expected value that if we change 
 a given event's value by $$ \Delta x $$, we change expectation by 
@@ -71,7 +72,7 @@ $$ \Delta x \cdot p(x) $$.
 What happens if we now play with assigned probabilities over fixed $$\{ 1, 2 \}$$? It's even more interesting now: since probabilities need to sum to 1, increasing an event's 
 probability means decreasing that of one or more others. In the simplest case (the complicated case really isn't complicated), we have 
 
-\[  \Delta E(x) = \Delta p(x) \cdot x + \Delta p(y) \cdot y \]
+$$  \Delta E(x) = \Delta p(x) \cdot x + \Delta p(y) \cdot y $$
 
 In conclusion, expectation looks like a **linear** function over both its event space and
 their assigned probabilities. Nice! Linearity usually points to something like a 

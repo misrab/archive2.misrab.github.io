@@ -1,17 +1,17 @@
 /*
  * Grab a custom font from Google
  */
-/*@import url("http://fonts.googleapis.com/css?family=Lato");*/
+@import url("http://fonts.googleapis.com/css?family=Lato");
 html,
 body {
   height: 100%;
 }
 body {
- /* font-family: 'Lato';*/
-  font-family: 'CMS', 'Droid Sans', Helvetica, Arial, sans-serif;
+  font-family: 'Lato';
+  /*font-family: 'CMS', 'Droid Sans', Helvetica, Arial, sans-serif;*/
   background-color: #e7feff;
   word-wrap: break-word;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.75em;
 }
 
@@ -66,6 +66,10 @@ textarea {
 }
 .absolute {
   position: absolute;
+}
+
+.font-75 {
+  font-size: 0.75em;
 }
 .font1 {
   font-size: 1em;
@@ -148,8 +152,14 @@ p {
   text-align: justify;
 }
 
+
+.navbar {
+  background-color: #669999;
+  color: black;
+  font-size: 1.25em;
+}
 .navbar a:hover {
-  color: grey !important;
+  color: white !important;
 }
 
 .lucid {
