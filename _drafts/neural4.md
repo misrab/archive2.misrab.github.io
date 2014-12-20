@@ -1,5 +1,5 @@
 ---
-title: Neural Networks (3) - Layers & Gradients
+title: Neural Networks (4) - Recursion, Convolution, Embeddings
 layout: blog
 excerpt: |
   In the second part of this series, I look at the fundamental 
