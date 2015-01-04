@@ -37,7 +37,7 @@ The approach is as follows. If we want to distinguish every possible input, we n
 
 The answer is no: there are $2 \times 2 \times 2 = 8$ possible combinations of three bits, so in reality we'll need $8$ output neurons in the above example, so let's pretend that we do. Next, what do the connections represent? These can be any function we like. We could go so far as to manually set all connections to return $0$. For instance if $f_{i,j}$ is the function from input node $x_i$ to hidden layer node $h_j$, we could set them all to $0$. More interestingly, we could set them to the indicator function $\mathbb{1} (i=j)$. In other words, $h_i$ just checks to see if $x_i$ is $1$. The output layer then combines these for all possible inputes. For example $o_0$ could be the indicator that the first bit is $1$ and all others are $0$.
 
-Put briefly, neural networks are universal computation machines on the input, at least in theory (we've said nothing of efficiency).
+Put briefly, neural networks are [universal computation machines](http://en.wikipedia.org/wiki/Universal_approximation_theorem) on the input, at least in theory (we've said nothing of efficiency).
 
 ## Non-linearity & Learning
 
@@ -71,10 +71,14 @@ In the meantime, since we're going to be playing with neural networks lets defin
 
 ## Notation
 
-
-
+At each layer we can call the "input" nodes a vector $x \in \mathbb{R}^{m+1}$. There is one extra dimension as we'll set $x_0=1$ by convention to have $w_0$ be a bias or intercept value. The weight matrix for this layer is then $W \in \mathbb{R}^{(m+1) \times (n+1)}$ with $n$ output nodes. The output nodes are given by $f(W \cdot x) \in \mathbb{R}^{n+1}$ where $f$ could be the sigmoid function (defined pointwise over a vector).
 
 ## Conclusion
+
+We've briefly looked at how neural network can, in theory, distinguish any set of inputs. We've highlighted the overall architecture, including the desire for differentiable, monotone transition functions.
+
+In the next post, we'll dive into how a neural net actually "learns" its parameters, multi-layer networks, and gradients.
+
 
 ## Acknowledgements
 
