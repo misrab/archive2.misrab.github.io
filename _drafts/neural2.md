@@ -41,8 +41,33 @@ Put briefly, neural networks are universal computation machines on the input, at
 
 ## Non-linearity & Learning
 
-It makes sense to parametrise the connecting functions, rather than specify each one individually. The idea is that we can "learn" the parameters that accomplish a given objective function best.
+It makes sense to parametrise the connecting functions, rather than specify each one explicitly. The idea is that we can "learn" the parameters that accomplish a given objective function best. For example we could have $h_j = \sum_i w_i \cdot x_i$, a linear combination of the inputs, with weights specific to that hidden node. How then do we learn better parameters?
 
+We'll look at specific algorithms in the next post, and what issues arise with them. For now, let's develop some intuition about the architecture. Consider the simple network below:
+
+![super simple]({{ site.url }}/images/neural2/2.svg)
+
+If we use a linear function, we have $h_0 = w \cdot x_0$, and say $o_0 = w' \cdot h_0 = w' \cdot w \cdot x_0$ using substitution. So if we change the weight at a given input, we have a _directly proportional_ change in output, even if we have many hidden layers. If $w=1$ and we decrease it to $w=0.7$, we're reducing both output and weight by $30%$.
+
+What would be even worse would be to use a discontinuous function, for example a step function:
+
+![step]({{ site.url }}/images/neural2/3.svg)
+
+The problem here is that changing the input (in this case a real number) near $0$ can lead to a _big_ change in output, so being slightly wrong can really cost us. So we probably want a **smooth, differentiable** function. But why might we want something other than our nice and simple linear function? It is after all differentiable. A commonly used function is the sigmoid, which looks like this:
+
+![sigmoid]({{ site.url }}/images/neural2/4.svg)
+
+Other functions with similar shape are also used, but the sigmoid gradient simplifies calculations. If $g(x)$ is the sigmoid, the gradient is given by $g(x) \cdot (1-g(x))$:
+
+![sigmoid gradient]({{ site.url }}/images/neural2/5.svg)
+
+While not necessary, the way I see this gradient as being potentially beneficial is that it has a region of rapid change far from the center, and more sensitive tweaking near the center. This is probably deep and deserves more analysis.
+
+We can think of the sigmoid as a smoothed out version of the step function. We can change weights by arbitrarily small amounts to change the output by arbitrarily small amounts. Why do we want a "step" at all? In reality, what we want is non-linearity. If we only used linear functions, all compositions would be linear and higher level features would be limited. Perhaps signals like images and sounds, and many other kinds, are just amenable to non-linear analysis.
+
+We also want it to be monotone so that changing $w$ up or down yields a predictable change: we don't have local optima that are hard to find through a gradient search. We'll look into gradient methods in the next post, and hopefully things will become a bit clearer.
+
+In the meantime, since we're going to be playing with neural networks lets define more compact and consistent notation.
 
 ## Notation
 
