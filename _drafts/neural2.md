@@ -11,10 +11,22 @@ excerpt: |
 
 ## Introduction
 
+In our last post we spoke about the general context of neural networks,
+namely machine learning algorithms. The problem being solved is one of abstracting
+rule definitions in solving a problem.
+
+We also noted that neural networks might stand out in their ability to identify 
+useful feature transformations, which would serve the purpose of our desired 
+"abstraction" after all.
+
+Here I'll describe the fundamentals of neural network architecture, and why 
+this architecture might be useful.
 
 ## Architecture
 
-- include nonlinearity here
+
+
+  - include nonlinearity here
 
 ## Layers
 
