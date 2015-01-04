@@ -13,20 +13,25 @@ excerpt: |
 
 In our last post we spoke about the general context of neural networks,
 namely machine learning algorithms. The problem being solved is one of abstracting
-rule definitions in solving a problem.
+rule definitions in solving a problem away from the programmer.
 
 We also noted that neural networks might stand out in their ability to identify 
-useful feature transformations, which would serve the purpose of our desired 
-"abstraction" after all.
+useful feature transformations automatically, which would serve this overarching
+purpose.
 
 Here I'll describe the fundamentals of neural network architecture, and why 
 this architecture might be useful.
 
-## Architecture
+## Universality
+
+Let start by examining what a neural network can theoretically do. Remember, the problem at hand is to take "some" input, and say something useful about it. We might want to 
+group some inputs together, for example. In the extreme, most fine-grained case, we might 
+want to distinguish between _every_ possible input. All other problems are a subset of this extreme case. So let's see if a neural network can do this.
+
+## Non-linearity
 
 
-
-  - include nonlinearity here
+## Notation
 
 ## Layers
 

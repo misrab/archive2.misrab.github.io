@@ -7,4 +7,9 @@ excerpt: |
 ---
 
 
-# An Exploration of Basic Probability - Co-variation
+# Neural Networks (3) - Layers & Gradients
+
+
+## Layers
+
+## Gradient Problems
