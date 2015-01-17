@@ -36,13 +36,39 @@ completely decentralised. This means there is no single entity that can be help 
 
 The Bitcoin system incorporates cryptographic techniques to deal with the issues that arise from such a network, namely:
 
-- privacy
-- authenticity of transactions and balances
-- sequentiality in time
+1. Authenticity of transactions and balances
+2. Privacy: the ledger is public
+3. Sequentiality in time: which transaction came first?
 
 Let's explore these techniques.
 
-### Payment Authenticity
+### Transaction Authenticity
+
+Earlier, we mentionned that Alice could pay Bob 5 BTC by announing it on the network, thereby signalling all nodes to update the ledger. To prevent anyone from pretending to be Alice, this is done cryptographically.
+
+The announcement is the "message". Alice posseses a personal, secret "private key", which she uses alongside the message to create a "signature". In other words, $ signature = f(private key, message) $.
+
+But how do other nodes use this to determine authenticity? It turns out that Alice can also have a "public key" (which of course everybody knows). Nodes can verify the broadcast message through a seperate function $ v(signature, message, public key) $ that will essentially return true or false. If false, it would mean the correct private key was not used to generate the signature, and the message is thereby invalid. Note that a good consequence of this is that the message can't be maliciously or otherwise altered as it passes accross the network: that would invalidate it. The mathematics used is rooted in [elliptic curve cryptography](http://en.wikipedia.org/wiki/Elliptic_curve_cryptography).
+
+Since everybody has a public key, we use that as recipient address as well. In other words, when Alice is sending money to Bob, she actually sends it to his public key. This is simply reuse: no cryptography is being done here.
+
+### The Actual Ledger
+
+Now that we're getting the hang of transactions, let's remove the oversimplification from the ledger. In reality, account balances are not stored at all. How then can we be sure Alice has sufficient funds to send Bob 5 BTC? When she seeks to spend the 5 BTC, she must reference previous transactions where she _received_ bitcoins, for a total of 5 BTC.
+
+In other words, a transaction message is comprised of inputs and outputs. All inputs must be fully spent, so if Alice wished to send 10 BTC to Bob, using inputs amounting to 12 BTC, she would send herself 2 BTC in the outputs:
+
+![input output]({{ site.url }}/images/bitcoin/3.png)
+
+Hence ownership of Bitcoin is passed along in a change, where the validity of each transaction depends on previous transactions. What does this mean? It means before transacting in Bitcoin, one has to download the history of all transactions that ever took place, and sequentially verify them through signatures as discussed earlier. This is the cost of a decentralised network. It usually takes about a day, and only has to be done in aggregate once: it can then be done incrementally, which takes much, much less time.
+
+In addition to validating each transaction through signatures, each node checks for double-spending: the same input _cannot_ be used in two separate transactions.
+
+In summary, the ledger is a giant list of transactions. Possessing Bitcoin means having transactions where your public key is an output address, and where those outputs haven't been used as inputs for another transaction yet.
+
+### Double Spending and Sequentiality
+
+
 
 
 ## Conclusion
