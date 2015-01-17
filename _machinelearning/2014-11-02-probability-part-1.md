@@ -2,6 +2,7 @@
 title: An Exploration of Basic Probability - Counting & Expectation
 layout: blog
 image: /images/prob1/3.png
+date: 2014-11-02
 excerpt: |
   In the first part of this series, I look at probability as 
   counting, and expectation with non-numeric events. Can you tell 
@@ -11,6 +12,7 @@ excerpt: |
 
 # An Exploration of Basic Probability - Counting & Expectation
 
+_Posted on November 11th, 2014_
 
 ## Introduction
 

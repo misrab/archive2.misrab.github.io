@@ -5,9 +5,61 @@ title: Misrab's Blog
 
 <div class="container">
 	<div class="row">
-		<div class="col-md-1"></div>
-		<div class="col-md-10 relative" style="padding: 10px 50px;">
+		<div class="col-md-12 relative" style="padding: 10px 50px;">
 			<div class="lucid"></div>
+				<div class="row">
+					<div class="col-md-12">
+						<h1>Misrab's Blog</h1>
+						<div>
+							Welcome! My posts are generally in the realm of tech, but I've loosely listed them by topic. I hope you enjoy reading.
+						</div>
+					</div>
+				</div>
+
+
+
+				<div class="row">
+					<!-- machine learning -->
+					<div class="col-md-6">
+						<h1>Machine Learning</h1>
+						{% for post in site.machinelearning %}
+						<div class="row medium_space_top top">
+							<div class="col-md-8">
+								<h3 style="margin:0;"><a href="{{ post.url }}">
+									{{ post.title }}
+								</a></h3>
+								<span class="grey font-75 italic text-right">
+									{{ post.date | date: "%-d %B %Y" }}
+								</span>
+								<div class="grey">{{ post.excerpt }}</div>
+							</div>
+
+							<div class="col-md-4">
+								<img src="{{ post.image }}" style="width: 100%;" />
+							</div>
+						</div>
+						{% endfor %}
+					</div>
+					<!-- economics -->
+					<div class="col-md-6">
+						<h1>Economics</h1>
+						{% for post in site.economics %}
+						<div class="row medium_space_top top">
+							<div class="col-md-8">
+								<h3 style="margin:0;"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+								<span class="grey font-75 italic text-right">
+									{{ post.date | date: "%-d %B %Y" }}
+								</span>
+								<div class="grey">{{ post.excerpt }}</div>
+							</div>
+
+							<div class="col-md-4">
+								<img src="{{ post.image }}" style="width: 100%;" />
+							</div>
+						</div>
+						{% endfor %}
+					</div>
+				</div>
 
 			<!-- <a class="big_space_top" href="https://medium.com/@misrabfaizullahkhan">
 				<h3 style="">Older posts here...</h3>
@@ -69,6 +121,6 @@ title: Misrab's Blog
 				{% endfor %}
 			</ul> -->
 		</div>
-		<div class="col-md-1"></div>
+		<!-- <div class="col-md-1"></div> -->
 	</div>
 </div>

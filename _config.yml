@@ -1,7 +1,7 @@
 source: .
 destination: ./_site
 collections:
-  bioinformatics1:
+  machinelearning:
     output: true
-  bioinformatics2:
+  economics:
     output: true
