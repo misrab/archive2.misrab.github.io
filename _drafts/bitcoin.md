@@ -60,13 +60,65 @@ In other words, a transaction message is comprised of inputs and outputs. All in
 
 ![input output]({{ site.url }}/images/bitcoin/3.png)
 
-Hence ownership of Bitcoin is passed along in a change, where the validity of each transaction depends on previous transactions. What does this mean? It means before transacting in Bitcoin, one has to download the history of all transactions that ever took place, and sequentially verify them through signatures as discussed earlier. This is the cost of a decentralised network. It usually takes about a day, and only has to be done in aggregate once: it can then be done incrementally, which takes much, much less time.
+Hence ownership of Bitcoin is passed along in a chain, where the validity of each transaction depends on that of previous transactions. What does this mean? It means before transacting in Bitcoin, one has to download the history of all transactions that ever took place, and sequentially verify them through signatures as discussed earlier. This is the cost of a decentralised network. It usually takes about a day, and only has to be done in aggregate once: it can then be done incrementally, which takes much, much less time.
 
-In addition to validating each transaction through signatures, each node checks for double-spending: the same input _cannot_ be used in two separate transactions.
+In addition to validating each transaction through signatures, transactions are checked for double-spending: the same input _cannot_ be used in two separate transactions.
 
 In summary, the ledger is a giant list of transactions. Possessing Bitcoin means having transactions where your public key is an output address, and where those outputs haven't been used as inputs for another transaction yet.
 
+### Anonymity
+
+The [Tor network](http://en.wikipedia.org/wiki/Tor_%28anonymity_network%29) can be used to prevent your public key/address from being associated to a given computer or IP address.
+
+In addition, an individual can create a new public key for each transaction, since there are so many possibilities, to avoid transactions being associated to the same address. Note however that inputs and outputs used within a given transaction are visibly associated, and there are statistical attacks to link addresses this way.
+
+An important point is that _if_ a given public key is associated to Alice, she essentially loses anonymity forever, for those who know the association. For instance, if Bob found out Alice owns address A, creating a new address B and sending her money from A to B would not solve the problem, since that transaction would be public, and Bob could trace it. Maintaining anonymity through the careful use of addresses is thus very important.
+
 ### Double Spending and Sequentiality
+
+Given that messages are passed along the network, nodes may receive them at different points in time.
+
+![network order]({{ site.url }}/images/bitcoin/4.svg)
+
+This creates a vulnerability for double-spending. Furthermore, you can't trust a simple timestamp on a transaction, since the creator could write anything. For instance, Alice may send Bob 5 BTC by referencing some input #E74, prompting Bob to send her some product. She could then reference the same input #E74 to herself. Nothing stops her from doing this: she just creates the message using custom software, and signs it with her private key.
+
+Some nodes, like Charlie, on the network may receive Alice's self-payment transaction first, and thereafter count the real transaction as invalid. Bob will have sent his product, but wouldn't be able to use that money to buy things from Charlie and others. There would be different versions of history on the network.Bitcoin uses a key innovation to overcome this, called the **Blockchain**.
+
+### The Blockchain
+
+The Blockchain allows for a universal agreement on transaction order accross a decentralised network. It groups transactions into blocks, with each block containing a reference to the previous block:
+
+![blockchain]({{ site.url }}/images/bitcoin/5.svg)
+
+Transactions in the same block are considered simultaneous. Consider an existing chain of blocks. How do we decide which block comes next? Any node in the network can group transaction into a new block and present it as a candidate. The first candidate to be unlocked becomes the next in the chain.
+
+The way a block is unlocked is that it is run through a [hash](http://en.wikipedia.org/wiki/Hash_function), in Bitcoin's case [SHA256](http://en.wikipedia.org/wiki/SHA-2). The output of the hash is a string. It is nearly impossible to predict the output of a hash. Consider the following example: the input varies only in one letter, but the output varies completely. For instance, "meow" generates the following:
+
+_404cdd7bc109c432f8cc2443b45bcfe95980f5107215c645236e577929ac3e52_
+
+Meanwhile, "moow" generates:
+
+_cc7856417792e2efcd6dc170183ae9c91bb73cddc77d8e1e40c7f9c519f041d7_
+
+Equivalently, it is hard to tell which will be lexicographically bigger. The way the Blockchain uses such hashing is as follows: nodes must hash the candidate block *as well as a random number*, until the hash is smaller than some target value.
+
+![blockchain]({{ site.url }}/images/bitcoin/6.svg)
+
+It would take a single machine on the order of years to solve a block, so we are essentially relying on one node getting "lucky". When a block _is_ solved, that node broadcasts the correct guess, and the block is accepted as the next in the Blockchain. It is extremely unlikely for multiple nodes to solve the same block at the same time. In the event of a tie, multiple candidate paths are considered, until one path becomes longer. Thus the longest chain is considered the true one. At present, one generally waits for a block to be about six blocks into the chain's tail, just to be sure. The probability of being in the wrong tail (one that will lose a tie) decreases _exponentially_.
+
+The fundamental beauty of the Blockchain is that it makes it extremely unlikely for a given party to "fake" a version of history (and thus double-spend), as long as the majority of computational resources in the network are not owned by that party. It does this by bringing random guessing into the picture.
+
+### Solving Blocks
+
+Nodes are rewarded for trying to solve blocks by earning Bitcoin for doing so successfully. This is how new coins are injected into the economy. Since it is so unlikely to guess a block correctly, people tend to form very large cooperatives that split the proceeds when a block is solved. The number of coins created drops gradually, until no more will be added around 2140. After this, senders will pay a small transaction fee to incentivise it being processed in a block.
+
+### Conclusion of Fundamentals
+
+We have seen that Bitcoin offers an electronic payment system that is fully decentralised. Authenticity is maintained through cryptographic signing. Privacy can be maintained by randomly generating public addresses. Finally, and in my opinion most importantly, one decentralised version of history is maintained through the innovation of the Blockchain.
+
+Now that we understand the basics of Bitcoin, I'll try and formulate my current opinion on implications for the future.
+
+## Opinions
 
 
 
@@ -75,4 +127,4 @@ In summary, the ledger is a giant list of transactions. Possessing Bitcoin means
 
 ## Acknowledgements
 
-Two great resources I first used to understand Bitcoin were [this video](https://www.youtube.com/watch?v=Lx9zgZCMqXE) and [the original paper](https://bitcoin.org/bitcoin.pdf), and the organisation of my explanation likely deeply reflects that.
+My understanding of Bitcoin was initally heavily influenced by [this video](https://www.youtube.com/watch?v=Lx9zgZCMqXE) and [the original paper](https://bitcoin.org/bitcoin.pdf), which will be reflected in my exposition.
