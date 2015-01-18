@@ -61,66 +61,11 @@ title: Misrab's Blog
 					</div>
 				</div>
 
-			<!-- <a class="big_space_top" href="https://medium.com/@misrabfaizullahkhan">
-				<h3 style="">Older posts here...</h3>
-			</a> -->
-
-			<!-- posts here -->
-			<h1>Posts</h1>
-			{% for post in site.posts %}
-			<div class="row medium_space_top top">
-				<div class="col-md-8">
-					<h3 style="margin:0;"><a href="{{ post.url }}">{{ post.title }}</a></h3>
-					<span class="grey font-75 italic text-right">
-						{{ post.date | date: "%-d %B %Y" }}
-					</span>
-					<p class="grey">{{ post.excerpt }}</p>
-				</div>
-
-				<div class="col-md-4">
-					<img src="{{ post.image }}" style="width: 100%;" />
-				</div>
-			</div>
-			{% endfor %}
-			<!-- <ul>
-				{% for post in site.posts %}
-					<li>
-						<h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-						<span class="grey"> - {{ post.date | date: "%-d %B %Y" }}</span>
-						<p class="grey italic">{{ post.excerpt }}</p>
-					</li>
-				{% endfor %}
-			</ul> -->
 
 			<!-- medium.com -->
 			<h1>Medium Blog</h1>
 			<script async  src="https://static.medium.com/embed.js"></script><a class="m-profile" data-width="100%" href="https://medium.com/@misrabfaizullahkhan">Misrab Faizullah-Khan</a>
 
-
-			<!-- <h1>Bioinformatics I</h1>
-			<div class="grey italic">
-				Notes from Imperial's postgraduate bioinformatics course. Mainly for 
-				myself, but open to anyone.
-			</div>
-			<ul>
-				{% for note in site.bioinformatics1 %}
-					<li>
-						<a href="{{ note.url }}">{{ note.title }}</a>
-						<span class="grey"> - {{ note.date | date: "%-d %B %Y" }}</span>
-					</li>
-				{% endfor %}
-			</ul>
-
-			<h1>Bioinformatics II</h1>
-			<ul>
-				{% for note in site.bioinformatics2 %}
-					<li>
-						<a href="{{ note.url }}">{{ note.title }}</a>
-						<span class="grey"> - {{ note.date | date: "%-d %B %Y" }}</span>
-					</li>
-				{% endfor %}
-			</ul> -->
 		</div>
-		<!-- <div class="col-md-1"></div> -->
 	</div>
 </div>
