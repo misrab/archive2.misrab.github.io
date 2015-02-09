@@ -8,7 +8,8 @@ body {
 }
 body {
   /*font-family: 'Lato';*/
-  font-family: 'CMS', 'Droid Sans', Helvetica, Arial, sans-serif;
+  font-family: 'CMS', 'Droid Serif', Georgia, Times, serif; 
+  /*'CMS', 'Droid Sans', Helvetica, Arial, sans-serif;*/
   background-color: #e7feff;
   word-wrap: break-word;
   font-size: 20px;
