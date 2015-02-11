@@ -59,6 +59,9 @@ The Blockchain limits block size (groups of transactions considered to have happ
 
 Other, less fundamental albeit important issues also arise. As time goes by, the size of the Blockchain increases. It currently stands at about 29 gigabytes, making storage on a local client impractical. Thus, many clients are now [thin](https://en.bitcoin.it/wiki/Thin_Client_Security). Instead of truly verifying transactions, they rely on trusted nodes, again obviating the whole idea of decentralised security.
 
+**Edit** [_11-02-2015_]: while studying the Ethereum crypto system, I came accross 
+a good explanation of Merkle trees and thin clients ([see page 9 of white paper](https://www.ethereum.org/pdfs/EthereumWhitePaper.pdf)). It seems that a thin client _could_ achieve a high degree of security with a smaller version of the Blockchain, albeit one that still likely grows with time.
+
 ## Conclusion
 
 Perhaps some new innovation will address the limitations mentionned, but for the moment both Bitcoin and the Blockchain have significant flaws (despite their admitted brilliance). A path to price stability for Bitcoin is unclear or implausible, restricting it to niche use cases. As for the Blockchain, it has yet to address the paradox of distributed security and scalability.
