@@ -5,3 +5,5 @@ collections:
     output: true
   economics:
     output: true
+  mathematics:
+    output: true
