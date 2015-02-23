@@ -66,12 +66,33 @@ say the group is Abelian. Many interesting groups will not be.
 Let's look at some examples. The most typical would be the real numbers $\mathbb{R}$ under 
 usual addition. When then have $e = 0$ and $a^{-1} = -a$. For common operations we'll use symbols like $+$ or $*$ instead of $\circ$, but it is _really_ important to always be aware that we are really talking about an abstract operation. This will be crucial so as not to get confused when generalising.
 
-We already touched upon permutations of $n$ elements, also known as the **symmetric group** $S_n$. Aside from the identity permutation
+We already touched upon permutations of $n$ elements, also known as the **symmetric group** $S_n$. Aside from the identity permutation, we can think of each permutation $\tau_{i}$ 
+as fixing element $i$ and swapping the other two:
 
+![permutations]({{ site.url }}/images/groups/2.png)
 
-## Cyclic Groups
+One can then work out composition rules, such as $\tau_i \circ \tau_i = (\tau_i)^2 = e $. Note the exponential notation, and that the rightmost permutation is applied first.
+
+Another interesting group is called the general linear group $GL_n(\mathbb{R})$ of 
+invertible $n \times n$ matrices with real components i.e. with non-zero determinant.
+If we further require the determinant to be $+1$, we get the special linear group 
+$SL_n(\mathbb{R})$.
+
+As we explore more and more subtleties, we'll see example of how they relate to groups
+like these. The advantage of studying underlying structures then slowly becomes 
+clearer.
 
 ## Subgroups
+
+A subgroup is just a _subset_ of a group has all the properties of a group, 
+and is closed under $\circ$. In other words, elements don't hop outside of the 
+subgroup i.e. $a \circ b = c \notin H$.
+
+In our previous examples, we see that $SL_n(\mathbb{R})$ is clearly a subgroup 
+of $GL_n(\mathbb{R})$: any matrix with determinant $1$ has a non-zero determinant! 
+One can also check it has group properties, for instance the identity matrix.
+
+## Cyclic Groups
 
 ## Maps
 
