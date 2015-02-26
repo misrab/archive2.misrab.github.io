@@ -84,9 +84,9 @@ clearer.
 
 ## Subgroups
 
-A subgroup is just a _subset_ of a group has all the properties of a group, 
+A subgroup $H$ of a group $G$ is just a _subset_ of $G$ has all the properties of a group, 
 and is closed under $\circ$. In other words, elements don't hop outside of the 
-subgroup i.e. $a \circ b = c \notin H$.
+subgroup i.e. $a \circ b = c \notin H$, where $a, b \in H$.
 
 In our previous examples, we see that $SL_n(\mathbb{R})$ is clearly a subgroup 
 of $GL_n(\mathbb{R})$: any matrix with determinant $1$ has a non-zero determinant! 
@@ -124,20 +124,38 @@ $n=6$, [we have](http://en.wikipedia.org/wiki/Cyclic_group):
 
 ![roots of unity]({{ site.url }}/images/groups/4.png)
 
-Not only are cyclic groups very pretty, but they also play an essential role in group theory.
+Not only are cyclic groups very pretty, but they also play an essential role in group theory (a role that I am still only beginning to appreciate).
 
 
-## Maps
+## Maps and Morphisms
 
-## Morphisms
+Cool, so now we have groups. Let's see what happens when we go from one to another, 
+namely when we consider well-defined maps $m : G \rightarrow G'$. Let's start with an 
+important propery known as **homomorphism**. Specifically, a map $m$ is homomorphic if 
+$m(a \circ b) = m(a) * m(b)$. Note that $\circ$ and $*$ are the group operations for 
+$G$ and $G'$ respectively (notation matters!). So what does this property intuitively 
+mean? One way to look at it is such: combining elements in $G$ and _then_ mapping them 
+is the same as first mapping them separately, and then combining them in $G'$. Consider
+the following example where we transform each element $x \rightarrow x'$ homomorphically 
+in a vector space with vector addition:
 
-## Kernel, Image and Center
+![linear homomorphism]({{ site.url }}/images/groups/5.svg)
 
-## Quotient Groups
+Above taking $a + b$ and then mapping the result $c \rightarrow c'$ is equivalent to 
+$ a' + b'$. This can be useful in settings where we wish to preserve some level of 
+structure accross a transformation, for example in pattern recognition.
 
-Now is when things start to get really exciting.
+An **isomorphism** is a bijective homomorphism. When two groups are isomorphic, we can 
+essentially hop between one and the other through the isomorphic map. A one-to-one 
+correspondence of elements exists. An **automorphism** is just an isomorphism of a group 
+to itself i.e. $m: G \rightarrow G$. In other words, it is equivalent to a re-labelling of items.
 
 ## Conclusion
+
+I meant to talk about kernels, images, centers, and most importantly quotient groups, 
+but this post is getting long. I'll wait for a post on vector spaces to bring them up, hopefully with some intuitive linear examples! Quotient groups are really where things start getting funky, and are fundamental to modern applications like cryptography.
+
+Hopefully we've gotten a sense here of what group theory is about, and glimpsed at some of the potency of such a way of thinking.
 
 ## Ackowledgements
 
