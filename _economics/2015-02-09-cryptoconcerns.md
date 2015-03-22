@@ -53,14 +53,21 @@ Given a more or less fixed supply, and no clear path to stability, **I have seri
 
 ## Blockchain Scalability
 
+<em>
+**Edit** [_22-03-2015_]: [Gavin Andresen](http://en.wikipedia.org/wiki/Gavin_Andresen), 
+chief scientist of the [Bitcoin Foundation](http://blog.bitcoinfoundation.org/) has written a great article on a [scalability roadmap](http://blog.bitcoinfoundation.org/a-scalability-roadmap/) that addresses many of the issues mentionned here. There are still challenges to overcome, but it seems time and brainpower are being applied to them.
+</em>
+ 
 Okay, so we've seen that perhaps Bitcoin on its own will not be a ubiquitous means of exchange. That said, the [Blockchain](https://en.bitcoin.it/wiki/Block_chain) _is_ a brilliant innovation. Using computational resources of the network to democratise ledger sychronisation without the need of a central authority is amazing. However, while the problem of double-spending is addressed, a new paradox is created: that of scalability.
 
 The Blockchain limits block size (groups of transactions considered to have happened at the same time) to about 1 megabyte. This [video](https://www.youtube.com/watch?v=cZp7UGgBR0I) explains why: if the block size is too big, then expensive, specialised hardware is required to actually solve blocks. This defies the whole idea of a decentralised system: in effect control is returned to large organisations with sufficient resources. Therein lies the paradox: the block size limits the maximum theoretical [number of transaction](https://en.bitcoin.it/wiki/Maximum_transaction_rate) _accross the network_ to about 10 per second. Compare this to VISA (think credit cards), that processes an average of [2,000 transaction per second](https://en.bitcoin.it/wiki/Scalability).
 
 Other, less fundamental albeit important issues also arise. As time goes by, the size of the Blockchain increases. It currently stands at about 29 gigabytes, making storage on a local client impractical. Thus, many clients are now [thin](https://en.bitcoin.it/wiki/Thin_Client_Security). Instead of truly verifying transactions, they rely on trusted nodes, again obviating the whole idea of decentralised security.
 
+<em>
 **Edit** [_11-02-2015_]: while studying the Ethereum crypto system, I came accross 
 a good explanation of Merkle trees and thin clients ([see page 9 of white paper](https://www.ethereum.org/pdfs/EthereumWhitePaper.pdf)). It seems that a thin client _could_ achieve a high degree of security with a smaller version of the Blockchain, albeit one that still likely grows with time.
+</em>
 
 ## Conclusion
 
