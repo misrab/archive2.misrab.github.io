@@ -69,13 +69,20 @@ So indeed $a b a^{-1} \in ker(\phi)$. This is a useful point to remember: _the k
 
 ## Equivalence & Cosets
 
-// - mention superimportant. mention left, right
-// - partitions and counting!
 // - prime order groups
 
 Let's recall some simple modular arithmetic. Say we are operating in _modulo_ 5. Then
 $$0 = 0 \pmod 5, 1 = 1 \pmod 5...4 = 4 \pmod5, 5 = 0 \pmod 5, 6 = 1 \pmod 5...$$
 We can then do additions such as $9 + 5 = 14 = 4 \pmod 5$. Notice the _cyclicality_ - that should send some sparks flying in your brain (think cyclic groups)!
+
+
+<center>
+	<img src="/images/groups2/3.svg" style="height: 250px;" />
+	<em>Clocks are an example of modular arithmetic</em>
+</center>
+
+
+
 
 This leads to the notion of **equivalence classes**, which is just a generalisation of equality. For any two elements $a, b$ (in some set), we say $a \sim b$ ("$a$ relates to $b$") if the relation $~$ has the following properties:
 
@@ -93,10 +100,6 @@ These are properties we'd like for a notion of equality. In our modular example,
 // - show that aZ's form _all_ cosets of Z through Euclidean alg
 //   i.e. so we know we're not missing any parts of Z
 
-
-## Modular Arithmetic
-
-// - relate to cosets for intuition. draw attention to + vs \circ etc..
 
 ## Quotient Groups
 
