@@ -35,7 +35,7 @@ The collection of elements 'reached' in $G'$ by applying $f$ to elements in $G$ 
 
 ![image of map]({{ site.url }}/images/groups2/1.svg)
 
-The elements in $G$ that get mapped to the identity in $G'$ are the kernel of $f$. I like ot think of these as items in $G$ that get 'smashed' down to $e'$:
+The elements in $G$ that get mapped to the identity in $G'$ are the kernel of $f$. I like to think of these as items in $G$ that get "smashed" down to $e'$:
 
 ![kernel]({{ site.url }}/images/groups2/2.svg)
 
