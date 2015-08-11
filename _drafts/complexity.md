@@ -36,5 +36,11 @@ Before trying to be too technical or precise, I thought it would be helpful to j
 
 ### Number of parts
 
+It seems intuitive to model systems generally as a set of parts interacting. This can be 
+viewed as a graph with vertices/nodes and edges. I think the intuitiveness of graphs makes them dangerous: one shouldn't take them for granted (as with anything)! We have to make a decision on granularity. On one extreme, we could of course just call the entire system one single node. On the other hand, in a team project where nodes are members, we could split up a member into phases of the day, on into the person's sub-projects.
+
+So what's a reasonable way to determine the granularity to use on a graph for analysing complexity?
+
+![granularity]({{ site.url }}/images/complexity/granularity.svg)
 
 
