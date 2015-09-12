@@ -7,3 +7,5 @@ collections:
     output: true
   mathematics:
     output: true
+  random:
+    output: true
