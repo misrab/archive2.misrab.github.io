@@ -24,7 +24,19 @@ Apple, Google, and Amazon have the best technical talent out there. So what's st
 
 ## A Cool Jarvis
 
+I envision multiple levels of Jarvis, and emphasise improvability in each component. If Jarvis can't improve a feature on the fly given feedback, it shouldn't be there. Also, I'm biased towards fundamental solutions instead of hardcoding, although there can be some hardcoding and manual tweaking initially (i.e. vs a strong AI from the start!).
 
+### Basic Input Only
+
+- Jarvis knows what words I'm saying (basic speech-to-text).
+- I can correct a misunderstanding. This could even be a manual text edit, or a hardcoded verbal flow. The probabilistic impact should be meaningful.
+
+### Input with context
+
+- Jarvis remembers things I've said in the current conversation, possibly longer. This has meaningful probabilistic impact on his understanding of my words. Initially this can be super simple. Later it can include concepts and time.
+- Hardcoded notion of an action, and meta action management.
+
+### 
 
 
 ## The Current State
