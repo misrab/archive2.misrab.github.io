@@ -24,6 +24,8 @@ Apple, Google, and Amazon have the best technical talent out there. So what's st
 
 ## A Cool Jarvis
 
+I have an idea of what _I_ think would be a cool Jarvis. This is a bit subjective, so feel free to dream up your own alterations. Check out Iron Man's version of Jarvis [here](https://www.youtube.com/watch?v=ZwOxM0-byvc). He seems to be a fully sentient AI with the intelligence and deference of a human butler.
+
 
 
 
