@@ -2,7 +2,7 @@
 title: Revealed Preference
 layout: blog
 image: /images/misc/preference.jpg
-date: 2015-02-09
+date: 2016-01-29
 excerpt: |
   Quick thought on decision making through revealed preference
 ---
