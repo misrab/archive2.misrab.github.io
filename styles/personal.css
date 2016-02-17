@@ -7,7 +7,10 @@ html, body {
 body {
   word-wrap: break-word;
   color: white;
-  font-family: "Lato"; }
+  /*font-family: "Lato"; */
+  font-family: "Merriweather", "PT Serif", Georgia, "Times New Roman", serif;
+
+}
 
 a, a:hover {
   text-decoration: none; }
