@@ -33,7 +33,13 @@ Finally, this raises the general issue of static ceteris paribus analysis, versu
 
 Think about what a decentralised Turing machine could accomplish.
 
+- a way to distribute digital content more easily, with payment and less torrenting?
 
+- accreditation and identity.
+	* e.g. your online profile that you can give people access to. Government ID. Contact info. Allow universities etc to accredit your profile with stuff.
+	* can also be a yellowpages for businesses
+
+- see Maker DAO and Dai stable currency
 
 
 ## Making the future
