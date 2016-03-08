@@ -41,6 +41,17 @@ Think about what a decentralised Turing machine could accomplish.
 
 - see Maker DAO and Dai stable currency
 
+- some form of modern news?
+
+- Yelp: business reviews. Advantage could be review provably tied to a purchase or something, so no fake reviews. And maybe tracable to a public account.
+
+- Advertising / ad network?
+
+- Auctions
+
+- a DAO for dapp developpers to share in rewards of their dapps
+
+
 
 ## Making the future
 
