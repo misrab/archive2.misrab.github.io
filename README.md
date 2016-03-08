@@ -48,8 +48,12 @@ Think about what a decentralised Turing machine could accomplish.
 - Advertising / ad network?
 
 - Auctions
+	* winner indisputable
+	* reputation for sellers that dont deliver
 
 - a DAO for dapp developpers to share in rewards of their dapps
+
+- public accounting and auditing
 
 
 
