@@ -38,6 +38,27 @@ Finally, this raises the general issue of static ceteris paribus analysis, versu
 
 Think about what a decentralised Turing machine could accomplish.
 
+- a way to distribute digital content more easily, with payment and less torrenting?
+
+- accreditation and identity.
+	* e.g. your online profile that you can give people access to. Government ID. Contact info. Allow universities etc to accredit your profile with stuff.
+	* can also be a yellowpages for businesses
+
+- see Maker DAO and Dai stable currency
+
+- some form of modern news?
+
+- Yelp: business reviews. Advantage could be review provably tied to a purchase or something, so no fake reviews. And maybe tracable to a public account.
+
+- Advertising / ad network?
+
+- Auctions
+	* winner indisputable
+	* reputation for sellers that dont deliver
+
+- a DAO for dapp developpers to share in rewards of their dapps
+
+- public accounting and auditing
 
 
 
