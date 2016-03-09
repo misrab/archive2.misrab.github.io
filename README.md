@@ -16,6 +16,11 @@ then overwrite the _posts version.
 This space is a sketchpad for ideas
 
 
+## naturally vs human defined objective functions
+
+e.g. army hierarchy in peacetime vs wartime
+
+
 ## Co-evolution
 
 We think of evolution as selection of one organism with the environment and other organisms held constant, and with a given objective function.
