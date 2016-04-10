@@ -60,6 +60,16 @@ Think about what a decentralised Turing machine could accomplish.
 
 - public accounting and auditing
 
+- decentralised insurance
+
+- reputation system
+
+- some sort of wiki
+
+- an ethcoin marketplace
+
+- blogging and subscription
+
 
 
 ## Making the future
